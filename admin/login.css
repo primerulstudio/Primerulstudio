@@ -1,0 +1,221 @@
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    background:#050816;
+    color:#ffffff;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    position:relative;
+}
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.bg-glow{
+    position:absolute;
+    width:700px;
+    height:700px;
+    background:radial-gradient(
+        circle,
+        rgba(139,92,246,0.35),
+        transparent 70%
+    );
+    filter:blur(80px);
+    animation:floatGlow 6s ease-in-out infinite;
+}
+
+@keyframes floatGlow{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-30px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+/* =========================================
+   LOGIN CONTAINER
+========================================= */
+
+.login-container{
+    width:100%;
+    max-width:450px;
+    padding:50px;
+    border-radius:30px;
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(18px);
+    position:relative;
+    z-index:2;
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.5),
+        0 0 40px rgba(139,92,246,0.15);
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.login-logo{
+    font-size:28px;
+    font-weight:800;
+    letter-spacing:3px;
+    color:#8b5cf6;
+    margin-bottom:25px;
+    text-align:center;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.login-container h1{
+    font-size:36px;
+    font-weight:800;
+    margin-bottom:12px;
+    text-align:center;
+}
+
+.login-container p{
+    text-align:center;
+    color:#94a3b8;
+    margin-bottom:35px;
+    line-height:1.6;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.login-form{
+    width:100%;
+}
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group{
+    margin-bottom:20px;
+}
+
+/* =========================================
+   INPUT
+========================================= */
+
+.form-group input{
+    width:100%;
+    padding:18px 20px;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,0.08);
+    background:rgba(255,255,255,0.03);
+    color:#ffffff;
+    font-size:15px;
+    outline:none;
+    transition:0.3s ease;
+}
+
+.form-group input:focus{
+    border-color:#8b5cf6;
+    box-shadow:
+        0 0 0 4px rgba(139,92,246,0.12);
+}
+
+.form-group input::placeholder{
+    color:#64748b;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.login-btn{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:18px;
+    background:#8b5cf6;
+    color:#ffffff;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s ease;
+    box-shadow:
+        0 15px 40px rgba(139,92,246,0.35);
+}
+
+.login-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:
+        0 20px 50px rgba(139,92,246,0.45);
+}
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.error-message{
+    margin-top:20px;
+    text-align:center;
+    color:#f87171;
+    font-size:14px;
+    min-height:20px;
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#050816;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#8b5cf6;
+    border-radius:20px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:600px){
+
+    .login-container{
+        margin:20px;
+        padding:35px 25px;
+    }
+
+    .login-container h1{
+        font-size:28px;
+    }
+
+    .login-logo{
+        font-size:24px;
+    }
+
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Admin Dashboard | RulBandStudio
+    </title>
+
+    <!-- GOOGLE FONT -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- =========================================
+         SIDEBAR
+    ========================================== -->
+
+    <aside class="sidebar">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            RUL ADMIN
+
+        </div>
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-nav">
+
+            <a href="#">
+
+                Dashboard
+
+            </a>
+
+            <a href="#">
+
+                Orders
+
+            </a>
+
+            <a href="#">
+
+                Analytics
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="main">
+
+        <!-- =========================================
+             ADMIN TOPBAR
+        ========================================== -->
+
+        <div class="admin-topbar">
+
+            <!-- LEFT -->
+
+            <div class="topbar-left">
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+                <p>
+                    Manage all customer orders realtime
+                </p>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="topbar-right">
+
+                <!-- SEARCH -->
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search order..."
+                >
+
+                <!-- FILTER -->
+
+                <select id="filterSelect">
+
+                    <option value="All">
+                        All Orders
+                    </option>
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                    <option value="Completed">
+                        Completed
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <!-- =========================================
+             ADMIN STATS
+        ========================================== -->
+
+        <div class="admin-stats">
+
+            <!-- TOTAL -->
+
+            <div class="stat-card">
+
+                <h3>
+                    Total Orders
+                </h3>
+
+                <h1 id="totalOrders">
+                    0
+                </h1>
+
+            </div>
+
+            <!-- PENDING -->
+
+            <div class="stat-card">
+
+                <h3>
+                    Pending Orders
+                </h3>
+
+                <h1 id="pendingOrders">
+                    0
+                </h1>
+
+            </div>
+
+        </div>
+
+        <!-- =========================================
+             ORDERS CONTAINER
+        ========================================== -->
+
+        <div class="orders-container">
+
+            <div class="orders-header">
+
+                <h2>
+                    Latest Orders
+                </h2>
+
+            </div>
+
+            <!-- =========================================
+                 ORDERS GRID
+            ========================================== -->
+
+            <div
+                class="orders-grid"
+                id="ordersGrid"
+            >
+
+                <!-- REALTIME ORDERS -->
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- =========================================
+         SCRIPTS
+    ========================================== -->
+
+    <script
+        type="module"
+        src="protect.js"
+    ></script>
+
+    <script
+        type="module"
+        src="admin.js"
+    ></script>
+
+</body>
+
+</html>
